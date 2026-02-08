@@ -257,8 +257,7 @@ class XALManager:
             "POST", url, headers=headers, json=post_body
         )
         resp.raise_for_status()
-        response_data = resp.json()
-        return SisuAuthorizationResponse(**response_data)
+        return SisuAuthorizationResponse(**resp.json())
         
     async def xsts_authorization(
         self,
