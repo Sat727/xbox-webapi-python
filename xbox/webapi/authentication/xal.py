@@ -250,7 +250,7 @@ class XALManager:
             "SiteName": "user.auth.xboxlive.com",
             "SessionId": sisu_session_id,
             "ProofKey": self.session.request_signer.proof_field,
-            "refresh_sisu": refresh_sisu
+            "refresh_sisu": Optional[str] = None
         }
 
         resp = await self.session.send_signed(
